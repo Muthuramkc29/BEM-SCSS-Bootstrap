@@ -1,0 +1,37 @@
+@mixin flexCenter($background) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $background;
+}
+
+.container{
+    background-color: aquamarine;
+    padding: 3rem;
+    @include flexCenter(aquamarine);
+
+    &__para {
+        color: brown;
+    }
+    &__h1 {
+        color: yellowgreen;
+        font-size: 3rem;
+    }
+    &__div{
+        background-color: rebeccapurple;
+        width: 120px;
+        height: 120px;
+        @include flexCenter(rebeccapurple);
+
+        &__img{
+            background-color: red;
+            width: 50px;
+            height: 50px;
+        }
+    }
+}
+
+.container--narrow {
+    max-width: 40rem;
+}
